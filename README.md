@@ -9,6 +9,10 @@ Running Demos
 ==
 Clone this repo and open a browser to index.html. Also, depending on availability, you might be able to view demos [here](https://rawgithub.com/andrewwakeling/ie-css-bugs/master/index.html).
 
+Understanding Causes
+==
+With the exception of edge-case scenarios, all code demonstrating the problems is contained within ie-unexpected.js.
+
 
 Demonstrations include:
 
