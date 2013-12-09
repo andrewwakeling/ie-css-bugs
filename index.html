@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .red {
+            color: red;
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+</head>
+<body>
+<h1>Stylesheets in Internet Explorer</h1>
+Demonstrating unexpected behaviour around stylesheets.<br>
+
+Learn more about KB262161 <a href="http://support.microsoft.com/kb/262161">here</a>
+or <a href="https://www.google.com.au/search?q=KB262161+site%3Asupport.microsoft.com&btnI">here</a>.
+<br>
+Note: These tests are only designed to run on IE8, 9 and 10.
+<ul>
+    <li><a href="test1-link-limitation.html">limitation through linked stylesheets</a> (KB262161)</li>
+    <li><a href="test2-style-limitation.html">limitation through style tag</a> (KB262161)</li>
+    <li><a href="test3-disabled-unalterable.html">inability to change disabled property</a> (KB262161)</li>
+    <li><a href="test4-inability-add-cssText.html">inability to add css text</a> (KB262161)</li>
+    <li><a href="test5-inability-assign-cssText.html">inability to assign css text</a> (KB262161)</li>
+    <li><a href="test6-rules-style-limitation.html">rule limitation in style</a> (KB262161)</li>
+    <li><a href="test7-rules-link-limitation.html">rule limitation in linked stylesheet</a> (KB262161)</li>
+    <li><a href="test8-crash-import-orphan.html">browser crashes using @import on orphaned style</a><span
+            class="red"> <b>(WARNING:</b> This will potentially crash your browser)</span></li>
+    <li><a href="test9-crash-fontface-orphan.html">browser crashes using @font-face on orphaned style</a><span
+            class="red"> <b>(WARNING:</b> This will potentially crash your browser)</span></li>
+</ul>
+
+The following are scenarios which cause issues which their root cause have yet to be identified.
+
+<ul>
+    <li><a href="scenario1.html">involves li, ul and list-style-type</a> (IE8)<span class="red"> <b>(WARNING:</b> This will potentially crash your browser)</span>
+    </li>
+</ul>
+</body>
+</html>

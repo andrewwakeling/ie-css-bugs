@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    Source: http://stackoverflow.com/questions/5869595/very-strange-ie-crash-problem-with-stylesheet-javascript-object
+
+    Note: Crash occurs when CSS is applied to the page. (i.e. If the cssText is set on an orphaned element, the crash will occur when appending to the head).
+
+    Still crashes
+    - "list-style-type" != "disc"
+    - padding >= 0
+    - using document.createElement('style')
+
+    No crash
+    - display: none
+    - removing any text before the start of <ul> (i.e. in this case, removing _)
+    - applying ul styles and then in another stack, applying the li styles
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <script type="text/javascript">
+        // I acknowledge that this is a very rough way of waiting for document ready.
+        var intervalId = setInterval(function () {
+            if (document.readyState === "complete") {
+                clearInterval(intervalId);
+                var style = document.createStyleSheet();
+                style.cssText = "ul{list-style-type:none;display:inline;}li{padding:0px;}"
+            }
+        }, 300);
+    </script>
+</head>
+<body>
+_<ul><li><a></a></li></ul>
+</body>
+</html>
